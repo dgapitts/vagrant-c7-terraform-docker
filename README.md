@@ -8,7 +8,7 @@ Running terraform with aws provider in a centos7 VM
 
 ### Exercises
 
-* tbc
+* [Deom001 terraform docker-get-started](docs/Demo001-terraform-docker-get-started.md)
 
 
 
