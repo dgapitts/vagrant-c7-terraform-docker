@@ -8,7 +8,8 @@ Running terraform with aws provider in a centos7 VM
 
 ### Exercises
 
-* [Demo0001 terraform docker-get-started](docs/Demo001-terraform-docker-get-started.md)
+* [Demo001 terraform docker-get-started](docs/Demo001-terraform-docker-get-started.md)
+* [Demo002 switch nginx port via terraform](docs/Demo002-switch-nginx-port-via-terraform.md)
 
 
 ### Other
