@@ -1,4 +1,4 @@
-## Demo001 terraform docker-get-started
+## Demo 001 terraform docker-get-started
 Following hashicorp [terraform docker-get-started](https://learn.hashicorp.com/tutorials/terraform/docker-build?in=terraform/docker-get-started) guide
 
 

@@ -10,10 +10,11 @@ Running terraform with aws provider in a centos7 VM
 
 * [Demo001 terraform docker-get-started](docs/Demo001-terraform-docker-get-started.md)
 * [Demo002 switch nginx port via terraform](docs/Demo002-switch-nginx-port-via-terraform.md)
+* [Demo003 terraform destroy](docs/Demo003-terraform-detroy.md)
 
 
 ### Other
 
 * [Cannot connect to the Docker daemon and extra alias for docker.service](docs/Other001-docker-daemon-and-extra-alias.md)
-
+* [Strange tcp looker errors](docs/Other002-strange-tcp-issues.md)
 
