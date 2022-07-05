@@ -1,5 +1,14 @@
 ## Strange tcp looker errors
 
+### Summary
+
+This sort of issue(s) appears to be affecting many users, and there are lots of suggestions out there:
+* I have tried a couple but they didn't work (notes below)
+* The problems for me started when work on a public wifi network, my final solution was `vagrant destroy` and then rebuilt the machine where I'm running these terraform docker training examples.
+ 
+### Background
+
+
 
 Uggh, my project hit a wierd snag
 
