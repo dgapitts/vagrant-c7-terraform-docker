@@ -13,6 +13,7 @@ Running terraform with aws provider in a centos7 VM
 * [Demo003 terraform destroy](docs/Demo003-terraform-detroy.md)
 * [Demo004 define input variables](docs/Demo004-Define-Input-Variables.md)
 * [Demo005 query data with outputs](docs/Demo005-Demo004-Query-Data-with-Outputs.md)
+* [Demo006 terraform destroy auto-approve.md](docs/Demo006-terraform-destroy-auto-approve.md)
 
 
 ### Other
