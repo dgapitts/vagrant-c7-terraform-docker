@@ -11,7 +11,10 @@ terraform version
 
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+systemctl start docker
 
 yum install epel-release -y
 yum install jq -y
 
+mkdir ~/learn-terraform-docker-container
+cp /vagrant/*.tf  ~/learn-terraform-docker-container
