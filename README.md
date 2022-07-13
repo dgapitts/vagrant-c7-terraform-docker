@@ -8,6 +8,10 @@ Running terraform with aws provider in a centos7 VM
 
 ### Exercises
 
+I've added
+* [Demo000 quick start demo](docs/Demo000-quick-start-demo.md)
+
+this is summary / quick overview, of the hashicorp setup and exercises, which I step through in Demo 01 ot Demo 06:
 * [Demo001 terraform docker-get-started](docs/Demo001-terraform-docker-get-started.md)
 * [Demo002 switch nginx port via terraform](docs/Demo002-switch-nginx-port-via-terraform.md)
 * [Demo003 terraform destroy](docs/Demo003-terraform-detroy.md)

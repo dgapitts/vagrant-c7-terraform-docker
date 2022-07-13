@@ -1,0 +1,834 @@
+~/projects/vagrant-c7-terraform-docker $ vagrant up
+Bringing machine 'master1' up with 'virtualbox' provider...
+==> master1: Importing base box 'https://cloud.centos.org/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1804_02.VirtualBox.box'...
+==> master1: Matching MAC address for NAT networking...
+==> master1: Setting the name of the VM: vagrant-c7-terraform-docker_master1_1657472971208_1153
+==> master1: Clearing any previously set network interfaces...
+==> master1: Preparing network interfaces based on configuration...
+    master1: Adapter 1: nat
+    master1: Adapter 2: hostonly
+==> master1: Forwarding ports...
+    master1: 22 (guest) => 2222 (host) (adapter 1)
+==> master1: Running 'pre-boot' VM customizations...
+==> master1: Booting VM...
+==> master1: Waiting for machine to boot. This may take a few minutes...
+    master1: SSH address: 127.0.0.1:2222
+    master1: SSH username: vagrant
+    master1: SSH auth method: private key
+    master1: Warning: Connection reset. Retrying...
+    master1: Warning: Remote connection disconnect. Retrying...
+    master1: Warning: Connection reset. Retrying...
+    master1: Warning: Remote connection disconnect. Retrying...
+    master1: Warning: Connection reset. Retrying...
+==> master1: Machine booted and ready!
+==> master1: Checking for guest additions in VM...
+    master1: No guest additions were detected on the base box for this VM! Guest
+    master1: additions are required for forwarded ports, shared folders, host only
+    master1: networking, and more. If SSH fails on this machine, please install
+    master1: the guest additions and repackage the box to continue.
+    master1: 
+    master1: This is not an error message; everything may continue to work properly,
+    master1: in which case you may ignore this message.
+==> master1: Setting hostname...
+==> master1: Configuring and enabling network interfaces...
+==> master1: Rsyncing folder: /Users/dave/projects/vagrant-c7-terraform-docker/ => /vagrant
+==> master1: Running provisioner: shell...
+    master1: Running: /var/folders/n5/npjt7p592n37h6xpw11yppqc0000gp/T/vagrant-shell20220710-30102-uduwkf.sh
+    master1: ADD EXTRA ALIAS VIA .bashrc
+    master1: Loaded plugins: fastestmirror
+    master1: Determining fastest mirrors
+    master1:  * base: mirror.1000mbps.com
+    master1:  * extras: ftp.tudelft.nl
+    master1:  * updates: nl.mirrors.clouvider.net
+    master1: Resolving Dependencies
+    master1: --> Running transaction check
+    master1: ---> Package unzip.x86_64 0:6.0-24.el7_9 will be installed
+    master1: --> Finished Dependency Resolution
+    master1: 
+    master1: Dependencies Resolved
+    master1: 
+    master1: ================================================================================
+    master1:  Package        Arch            Version                  Repository        Size
+    master1: ================================================================================
+    master1: Installing:
+    master1:  unzip          x86_64          6.0-24.el7_9             updates          172 k
+    master1: 
+    master1: Transaction Summary
+    master1: ================================================================================
+    master1: Install  1 Package
+    master1: 
+    master1: Total download size: 172 k
+    master1: Installed size: 369 k
+    master1: Downloading packages:
+    master1: Public key for unzip-6.0-24.el7_9.x86_64.rpm is not installed
+    master1: warning: /var/cache/yum/x86_64/7/updates/packages/unzip-6.0-24.el7_9.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    master1: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    master1: Importing GPG key 0xF4A80EB5:
+    master1:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    master1:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    master1:  Package    : centos-release-7-5.1804.el7.centos.x86_64 (@anaconda)
+    master1:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    master1: Running transaction check
+    master1: Running transaction test
+    master1: Transaction test succeeded
+    master1: Running transaction
+    master1:   Installing : unzip-6.0-24.el7_9.x86_64                                    1/1
+    master1:  
+    master1:   Verifying  : unzip-6.0-24.el7_9.x86_64                                    1/1
+    master1:  
+    master1: 
+    master1: Installed:
+    master1:   unzip.x86_64 0:6.0-24.el7_9                                                   
+    master1: 
+    master1: Complete!
+    master1: Loaded plugins: fastestmirror
+    master1: Loading mirror speeds from cached hostfile
+    master1:  * base: mirror.1000mbps.com
+    master1:  * extras: ftp.tudelft.nl
+    master1:  * updates: nl.mirrors.clouvider.net
+    master1: Resolving Dependencies
+    master1: --> Running transaction check
+    master1: ---> Package yum-utils.noarch 0:1.1.31-45.el7 will be updated
+    master1: ---> Package yum-utils.noarch 0:1.1.31-54.el7_8 will be an update
+    master1: --> Finished Dependency Resolution
+    master1: 
+    master1: Dependencies Resolved
+    master1: 
+    master1: ================================================================================
+    master1:  Package           Arch           Version                    Repository    Size
+    master1: ================================================================================
+    master1: Updating:
+    master1:  yum-utils         noarch         1.1.31-54.el7_8            base         122 k
+    master1: 
+    master1: Transaction Summary
+    master1: ================================================================================
+    master1: Upgrade  1 Package
+    master1: 
+    master1: Total download size: 122 k
+    master1: Downloading packages:
+    master1: No Presto metadata available for base
+    master1: Running transaction check
+    master1: Running transaction test
+    master1: Transaction test succeeded
+    master1: Running transaction
+    master1:   Updating   : yum-utils-1.1.31-54.el7_8.noarch                             1/2
+    master1:  
+    master1:   Cleanup    : yum-utils-1.1.31-45.el7.noarch                               2/2
+    master1:  
+    master1:   Verifying  : yum-utils-1.1.31-54.el7_8.noarch                             1/2
+    master1:  
+    master1:   Verifying  : yum-utils-1.1.31-45.el7.noarch                               2/2
+    master1:  
+    master1: 
+    master1: Updated:
+    master1:   yum-utils.noarch 0:1.1.31-54.el7_8                                            
+    master1: 
+    master1: Complete!
+    master1: Loaded plugins: fastestmirror
+    master1: adding repo from: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+    master1: grabbing file https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo to /etc/yum.repos.d/hashicorp.repo
+    master1: repo saved to /etc/yum.repos.d/hashicorp.repo
+    master1: Loaded plugins: fastestmirror
+    master1: Loading mirror speeds from cached hostfile
+    master1:  * base: mirror.1000mbps.com
+    master1:  * extras: ftp.tudelft.nl
+    master1:  * updates: nl.mirrors.clouvider.net
+    master1: Resolving Dependencies
+    master1: --> Running transaction check
+    master1: ---> Package terraform.x86_64 0:1.2.4-1 will be installed
+    master1: --> Finished Dependency Resolution
+    master1: 
+    master1: Dependencies Resolved
+    master1: 
+    master1: ================================================================================
+    master1:  Package            Arch            Version            Repository          Size
+    master1: ================================================================================
+    master1: Installing:
+    master1:  terraform          x86_64          1.2.4-1            hashicorp           13 M
+    master1: 
+    master1: Transaction Summary
+    master1: ================================================================================
+    master1: Install  1 Package
+    master1: 
+    master1: Total download size: 13 M
+    master1: Installed size: 60 M
+    master1: Downloading packages:
+    master1: Public key for terraform-1.2.4-1.x86_64.rpm is not installed
+    master1: warning: /var/cache/yum/x86_64/7/hashicorp/packages/terraform-1.2.4-1.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID a3219f7b: NOKEY
+    master1: Retrieving key from https://rpm.releases.hashicorp.com/gpg
+    master1: Importing GPG key 0xA3219F7B:
+    master1:  Userid     : "HashiCorp Security (HashiCorp Package Signing) <security+packaging@hashicorp.com>"
+    master1:  Fingerprint: e8a0 32e0 94d8 eb4e a189 d270 da41 8c88 a321 9f7b
+    master1:  From       : https://rpm.releases.hashicorp.com/gpg
+    master1: Running transaction check
+    master1: Running transaction test
+    master1: Transaction test succeeded
+    master1: Running transaction
+    master1:   Installing : terraform-1.2.4-1.x86_64                                     1/1
+    master1:  
+    master1:   Verifying  : terraform-1.2.4-1.x86_64                                     1/1
+    master1:  
+    master1: 
+    master1: Installed:
+    master1:   terraform.x86_64 0:1.2.4-1                                                    
+    master1: 
+    master1: Complete!
+    master1: Terraform v1.2.4
+    master1: on linux_amd64
+    master1: Loaded plugins: fastestmirror
+    master1: adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+    master1: grabbing file https://download.docker.com/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo
+    master1: repo saved to /etc/yum.repos.d/docker-ce.repo
+    master1: Loaded plugins: fastestmirror
+    master1: Loading mirror speeds from cached hostfile
+    master1:  * base: mirror.1000mbps.com
+    master1:  * extras: ftp.tudelft.nl
+    master1:  * updates: nl.mirrors.clouvider.net
+    master1: Resolving Dependencies
+    master1: --> Running transaction check
+    master1: ---> Package containerd.io.x86_64 0:1.6.6-3.1.el7 will be installed
+    master1: --> Processing Dependency: container-selinux >= 2:2.74 for package: containerd.io-1.6.6-3.1.el7.x86_64
+    master1: ---> Package docker-ce.x86_64 3:20.10.17-3.el7 will be installed
+    master1: --> Processing Dependency: docker-ce-rootless-extras for package: 3:docker-ce-20.10.17-3.el7.x86_64
+    master1: --> Processing Dependency: libcgroup for package: 3:docker-ce-20.10.17-3.el7.x86_64
+    master1: ---> Package docker-ce-cli.x86_64 1:20.10.17-3.el7 will be installed
+    master1: --> Processing Dependency: docker-scan-plugin(x86-64) for package: 1:docker-ce-cli-20.10.17-3.el7.x86_64
+    master1: ---> Package docker-compose-plugin.x86_64 0:2.6.0-3.el7 will be installed
+    master1: --> Running transaction check
+    master1: ---> Package container-selinux.noarch 2:2.119.2-1.911c772.el7_8 will be installed
+    master1: --> Processing Dependency: selinux-policy-targeted >= 3.13.1-216.el7 for package: 2:container-selinux-2.119.2-1.911c772.el7_8.noarch
+    master1: --> Processing Dependency: selinux-policy-base >= 3.13.1-216.el7 for package: 2:container-selinux-2.119.2-1.911c772.el7_8.noarch
+    master1: --> Processing Dependency: selinux-policy >= 3.13.1-216.el7 for package: 2:container-selinux-2.119.2-1.911c772.el7_8.noarch
+    master1: --> Processing Dependency: policycoreutils-python for package: 2:container-selinux-2.119.2-1.911c772.el7_8.noarch
+    master1: ---> Package docker-ce-rootless-extras.x86_64 0:20.10.17-3.el7 will be installed
+    master1: --> Processing Dependency: fuse-overlayfs >= 0.7 for package: docker-ce-rootless-extras-20.10.17-3.el7.x86_64
+    master1: --> Processing Dependency: slirp4netns >= 0.4 for package: docker-ce-rootless-extras-20.10.17-3.el7.x86_64
+    master1: ---> Package docker-scan-plugin.x86_64 0:0.17.0-3.el7 will be installed
+    master1: ---> Package libcgroup.x86_64 0:0.41-21.el7 will be installed
+    master1: --> Running transaction check
+    master1: ---> Package fuse-overlayfs.x86_64 0:0.7.2-6.el7_8 will be installed
+    master1: --> Processing Dependency: libfuse3.so.3(FUSE_3.2)(64bit) for package: fuse-overlayfs-0.7.2-6.el7_8.x86_64
+    master1: --> Processing Dependency: libfuse3.so.3(FUSE_3.0)(64bit) for package: fuse-overlayfs-0.7.2-6.el7_8.x86_64
+    master1: --> Processing Dependency: libfuse3.so.3()(64bit) for package: fuse-overlayfs-0.7.2-6.el7_8.x86_64
+    master1: ---> Package policycoreutils-python.x86_64 0:2.5-34.el7 will be installed
+    master1: --> Processing Dependency: policycoreutils = 2.5-34.el7 for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: setools-libs >= 3.3.8-4 for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: libsemanage-python >= 2.5-14 for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: audit-libs-python >= 2.1.3-4 for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: python-IPy for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: libqpol.so.1(VERS_1.4)(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: libqpol.so.1(VERS_1.2)(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: libapol.so.4(VERS_4.0)(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: checkpolicy for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: libqpol.so.1()(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: --> Processing Dependency: libapol.so.4()(64bit) for package: policycoreutils-python-2.5-34.el7.x86_64
+    master1: ---> Package selinux-policy.noarch 0:3.13.1-192.el7_5.3 will be updated
+    master1: ---> Package selinux-policy.noarch 0:3.13.1-268.el7_9.2 will be an update
+    master1: --> Processing Dependency: libsemanage >= 2.5-13 for package: selinux-policy-3.13.1-268.el7_9.2.noarch
+    master1: ---> Package selinux-policy-targeted.noarch 0:3.13.1-192.el7_5.3 will be updated
+    master1: ---> Package selinux-policy-targeted.noarch 0:3.13.1-268.el7_9.2 will be an update
+    master1: ---> Package slirp4netns.x86_64 0:0.4.3-4.el7_8 will be installed
+    master1: --> Running transaction check
+    master1: ---> Package audit-libs-python.x86_64 0:2.8.5-4.el7 will be installed
+    master1: --> Processing Dependency: audit-libs(x86-64) = 2.8.5-4.el7 for package: audit-libs-python-2.8.5-4.el7.x86_64
+    master1: ---> Package checkpolicy.x86_64 0:2.5-8.el7 will be installed
+    master1: ---> Package fuse3-libs.x86_64 0:3.6.1-4.el7 will be installed
+    master1: ---> Package libsemanage.x86_64 0:2.5-11.el7 will be updated
+    master1: ---> Package libsemanage.x86_64 0:2.5-14.el7 will be an update
+    master1: --> Processing Dependency: libsepol >= 2.5-10 for package: libsemanage-2.5-14.el7.x86_64
+    master1: --> Processing Dependency: libselinux >= 2.5-14 for package: libsemanage-2.5-14.el7.x86_64
+    master1: ---> Package libsemanage-python.x86_64 0:2.5-14.el7 will be installed
+    master1: ---> Package policycoreutils.x86_64 0:2.5-22.el7 will be updated
+    master1: ---> Package policycoreutils.x86_64 0:2.5-34.el7 will be an update
+    master1: --> Processing Dependency: libselinux-utils >= 2.5-14 for package: policycoreutils-2.5-34.el7.x86_64
+    master1: ---> Package python-IPy.noarch 0:0.75-6.el7 will be installed
+    master1: ---> Package setools-libs.x86_64 0:3.3.8-4.el7 will be installed
+    master1: --> Running transaction check
+    master1: ---> Package audit-libs.x86_64 0:2.8.1-3.el7 will be updated
+    master1: --> Processing Dependency: audit-libs(x86-64) = 2.8.1-3.el7 for package: audit-2.8.1-3.el7.x86_64
+    master1: ---> Package audit-libs.x86_64 0:2.8.5-4.el7 will be an update
+    master1: ---> Package libselinux.x86_64 0:2.5-12.el7 will be updated
+    master1: --> Processing Dependency: libselinux(x86-64) = 2.5-12.el7 for package: libselinux-python-2.5-12.el7.x86_64
+    master1: ---> Package libselinux.x86_64 0:2.5-15.el7 will be an update
+    master1: ---> Package libselinux-utils.x86_64 0:2.5-12.el7 will be updated
+    master1: ---> Package libselinux-utils.x86_64 0:2.5-15.el7 will be an update
+    master1: ---> Package libsepol.x86_64 0:2.5-8.1.el7 will be updated
+    master1: ---> Package libsepol.x86_64 0:2.5-10.el7 will be an update
+    master1: --> Running transaction check
+    master1: ---> Package audit.x86_64 0:2.8.1-3.el7 will be updated
+    master1: ---> Package audit.x86_64 0:2.8.5-4.el7 will be an update
+    master1: ---> Package libselinux-python.x86_64 0:2.5-12.el7 will be updated
+    master1: ---> Package libselinux-python.x86_64 0:2.5-15.el7 will be an update
+    master1: --> Finished Dependency Resolution
+    master1: 
+    master1: Dependencies Resolved
+    master1: 
+    master1: ================================================================================
+    master1:  Package                   Arch   Version                Repository        Size
+    master1: ================================================================================
+    master1: Installing:
+    master1:  containerd.io             x86_64 1.6.6-3.1.el7          docker-ce-stable  33 M
+    master1:  docker-ce                 x86_64 3:20.10.17-3.el7       docker-ce-stable  22 M
+    master1:  docker-ce-cli             x86_64 1:20.10.17-3.el7       docker-ce-stable  29 M
+    master1:  docker-compose-plugin     x86_64 2.6.0-3.el7            docker-ce-stable 7.0 M
+    master1: Installing for dependencies:
+    master1:  audit-libs-python         x86_64 2.8.5-4.el7            base              76 k
+    master1:  checkpolicy               x86_64 2.5-8.el7              base             295 k
+    master1:  container-selinux         noarch 2:2.119.2-1.911c772.el7_8
+    master1:                                                          extras            40 k
+    master1:  docker-ce-rootless-extras x86_64 20.10.17-3.el7         docker-ce-stable 8.2 M
+    master1:  docker-scan-plugin        x86_64 0.17.0-3.el7           docker-ce-stable 3.7 M
+    master1:  fuse-overlayfs            x86_64 0.7.2-6.el7_8          extras            54 k
+    master1:  fuse3-libs                x86_64 3.6.1-4.el7            extras            82 k
+    master1:  libcgroup                 x86_64 0.41-21.el7            base              66 k
+    master1:  libsemanage-python        x86_64 2.5-14.el7             base             113 k
+    master1:  policycoreutils-python    x86_64 2.5-34.el7             base             457 k
+    master1:  python-IPy                noarch 0.75-6.el7             base              32 k
+    master1:  setools-libs              x86_64 3.3.8-4.el7            base             620 k
+    master1:  slirp4netns               x86_64 0.4.3-4.el7_8          extras            81 k
+    master1: Updating for dependencies:
+    master1:  audit                     x86_64 2.8.5-4.el7            base             256 k
+    master1:  audit-libs                x86_64 2.8.5-4.el7            base             102 k
+    master1:  libselinux                x86_64 2.5-15.el7             base             162 k
+    master1:  libselinux-python         x86_64 2.5-15.el7             base             236 k
+    master1:  libselinux-utils          x86_64 2.5-15.el7             base             151 k
+    master1:  libsemanage               x86_64 2.5-14.el7             base             151 k
+    master1:  libsepol                  x86_64 2.5-10.el7             base             297 k
+    master1:  policycoreutils           x86_64 2.5-34.el7             base             917 k
+    master1:  selinux-policy            noarch 3.13.1-268.el7_9.2     updates          498 k
+    master1:  selinux-policy-targeted   noarch 3.13.1-268.el7_9.2     updates          7.0 M
+    master1: 
+    master1: Transaction Summary
+    master1: ================================================================================
+    master1: Install  4 Packages (+13 Dependent packages)
+    master1: Upgrade             ( 10 Dependent packages)
+    master1: 
+    master1: Total download size: 115 M
+    master1: Downloading packages:
+    master1: No Presto metadata available for base
+    master1: No Presto metadata available for updates
+    master1: Public key for docker-ce-20.10.17-3.el7.x86_64.rpm is not installed
+    master1: warning: /var/cache/yum/x86_64/7/docker-ce-stable/packages/docker-ce-20.10.17-3.el7.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID 621e9f35: NOKEY
+    master1: --------------------------------------------------------------------------------
+    master1: Total                                              4.6 MB/s | 115 MB  00:25     
+    master1: Retrieving key from https://download.docker.com/linux/centos/gpg
+    master1: Importing GPG key 0x621E9F35:
+    master1:  Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+    master1:  Fingerprint: 060a 61c5 1b55 8a7f 742b 77aa c52f eb6b 621e 9f35
+    master1:  From       : https://download.docker.com/linux/centos/gpg
+    master1: Running transaction check
+    master1: Running transaction test
+    master1: Transaction test succeeded
+    master1: Running transaction
+    master1:   Updating   : libsepol-2.5-10.el7.x86_64                                  1/37
+    master1:  
+    master1:   Updating   : libselinux-2.5-15.el7.x86_64                                2/37
+    master1:  
+    master1:   Updating   : audit-libs-2.8.5-4.el7.x86_64                               3/37
+    master1:  
+    master1:   Updating   : libsemanage-2.5-14.el7.x86_64                               4/37
+    master1:  
+    master1:   Updating   : libselinux-utils-2.5-15.el7.x86_64                          5/37
+    master1:  
+    master1:   Updating   : policycoreutils-2.5-34.el7.x86_64                           6/37
+    master1:  
+    master1:   Updating   : selinux-policy-3.13.1-268.el7_9.2.noarch                    7/37
+    master1:  
+    master1:   Installing : libcgroup-0.41-21.el7.x86_64                                8/37
+    master1:  
+    master1:   Updating   : selinux-policy-targeted-3.13.1-268.el7_9.2.noarch           9/37
+    master1:  
+    master1:   Installing : libsemanage-python-2.5-14.el7.x86_64                       10/37
+    master1:  
+    master1:   Installing : audit-libs-python-2.8.5-4.el7.x86_64                       11/37
+    master1:  
+    master1:   Installing : setools-libs-3.3.8-4.el7.x86_64                            12/37
+    master1:  
+    master1:   Updating   : libselinux-python-2.5-15.el7.x86_64                        13/37
+    master1:  
+    master1:   Installing : 1:docker-ce-cli-20.10.17-3.el7.x86_64                      14/37
+    master1:  
+    master1:   Installing : docker-scan-plugin-0.17.0-3.el7.x86_64                     15/37
+    master1:  
+    master1:   Installing : slirp4netns-0.4.3-4.el7_8.x86_64                           16/37
+    master1:  
+    master1:   Installing : fuse3-libs-3.6.1-4.el7.x86_64                              17/37
+    master1:  
+    master1:   Installing : fuse-overlayfs-0.7.2-6.el7_8.x86_64                        18/37
+    master1:  
+    master1:   Installing : python-IPy-0.75-6.el7.noarch                               19/37
+    master1:  
+    master1:   Installing : checkpolicy-2.5-8.el7.x86_64                               20/37
+    master1:  
+    master1:   Installing : policycoreutils-python-2.5-34.el7.x86_64                   21/37
+    master1:  
+    master1:   Installing : 2:container-selinux-2.119.2-1.911c772.el7_8.noarch         22/37
+    master1:  
+    master1:   Installing : containerd.io-1.6.6-3.1.el7.x86_64                         23/37
+    master1:  
+    master1:   Installing : 3:docker-ce-20.10.17-3.el7.x86_64                          24/37
+    master1:  
+    master1:   Installing : docker-ce-rootless-extras-20.10.17-3.el7.x86_64            25/37
+    master1:  
+    master1:   Updating   : audit-2.8.5-4.el7.x86_64                                   26/37
+    master1:  
+    master1:   Installing : docker-compose-plugin-2.6.0-3.el7.x86_64                   27/37
+    master1:  
+    master1:   Cleanup    : selinux-policy-targeted-3.13.1-192.el7_5.3.noarch          28/37
+    master1:  
+    master1:   Cleanup    : selinux-policy-3.13.1-192.el7_5.3.noarch                   29/37
+    master1:  
+    master1:   Cleanup    : policycoreutils-2.5-22.el7.x86_64                          30/37
+    master1:  
+    master1:   Cleanup    : libsemanage-2.5-11.el7.x86_64                              31/37
+    master1:  
+    master1:   Cleanup    : libselinux-utils-2.5-12.el7.x86_64                         32/37
+    master1:  
+    master1:   Cleanup    : libselinux-python-2.5-12.el7.x86_64                        33/37
+    master1:  
+    master1:   Cleanup    : libselinux-2.5-12.el7.x86_64                               34/37
+    master1:  
+    master1:   Cleanup    : audit-2.8.1-3.el7.x86_64                                   35/37
+    master1:  
+    master1:   Cleanup    : audit-libs-2.8.1-3.el7.x86_64                              36/37
+    master1:  
+    master1:   Cleanup    : libsepol-2.5-8.1.el7.x86_64                                37/37
+    master1:  
+    master1:   Verifying  : docker-ce-rootless-extras-20.10.17-3.el7.x86_64             1/37
+    master1:  
+    master1:   Verifying  : libselinux-2.5-15.el7.x86_64                                2/37
+    master1:  
+    master1:   Verifying  : 2:container-selinux-2.119.2-1.911c772.el7_8.noarch          3/37
+    master1:  
+    master1:   Verifying  : selinux-policy-targeted-3.13.1-268.el7_9.2.noarch           4/37
+    master1:  
+    master1:   Verifying  : audit-libs-2.8.5-4.el7.x86_64                               5/37
+    master1:  
+    master1:   Verifying  : checkpolicy-2.5-8.el7.x86_64                                6/37
+    master1:  
+    master1:   Verifying  : policycoreutils-2.5-34.el7.x86_64                           7/37
+    master1:  
+    master1:   Verifying  : python-IPy-0.75-6.el7.noarch                                8/37
+    master1:  
+    master1:   Verifying  : libselinux-utils-2.5-15.el7.x86_64                          9/37
+    master1:  
+    master1:   Verifying  : policycoreutils-python-2.5-34.el7.x86_64                   10/37
+    master1:  
+    master1:   Verifying  : docker-scan-plugin-0.17.0-3.el7.x86_64                     11/37
+    master1:  
+    master1:   Verifying  : fuse-overlayfs-0.7.2-6.el7_8.x86_64                        12/37
+    master1:  
+    master1:   Verifying  : docker-compose-plugin-2.6.0-3.el7.x86_64                   13/37
+    master1:  
+    master1:   Verifying  : setools-libs-3.3.8-4.el7.x86_64                            14/37
+    master1:  
+    master1:   Verifying  : fuse3-libs-3.6.1-4.el7.x86_64                              15/37
+    master1:  
+    master1:   Verifying  : audit-2.8.5-4.el7.x86_64                                   16/37
+    master1:  
+    master1:   Verifying  : libsemanage-python-2.5-14.el7.x86_64                       17/37
+    master1:  
+    master1:   Verifying  : libsemanage-2.5-14.el7.x86_64                              18/37
+    master1:  
+    master1:   Verifying  : slirp4netns-0.4.3-4.el7_8.x86_64                           19/37
+    master1:  
+    master1:   Verifying  : libselinux-python-2.5-15.el7.x86_64                        20/37
+    master1:  
+    master1:   Verifying  : 3:docker-ce-20.10.17-3.el7.x86_64                          21/37
+    master1:  
+    master1:   Verifying  : selinux-policy-3.13.1-268.el7_9.2.noarch                   22/37
+    master1:  
+    master1:   Verifying  : audit-libs-python-2.8.5-4.el7.x86_64                       23/37
+    master1:  
+    master1:   Verifying  : libsepol-2.5-10.el7.x86_64                                 24/37
+    master1:  
+    master1:   Verifying  : containerd.io-1.6.6-3.1.el7.x86_64                         25/37
+    master1:  
+    master1:   Verifying  : 1:docker-ce-cli-20.10.17-3.el7.x86_64                      26/37
+    master1:  
+    master1:   Verifying  : libcgroup-0.41-21.el7.x86_64                               27/37
+    master1:  
+    master1:   Verifying  : libsemanage-2.5-11.el7.x86_64                              28/37 
+    master1:   Verifying  : libselinux-python-2.5-12.el7.x86_64                        29/37 
+    master1:   Verifying  : audit-libs-2.8.1-3.el7.x86_64                              30/37
+    master1:  
+    master1:   Verifying  : selinux-policy-targeted-3.13.1-192.el7_5.3.noarch          31/37 
+    master1:   Verifying  : policycoreutils-2.5-22.el7.x86_64                          32/37
+    master1:  
+    master1:   Verifying  : libsepol-2.5-8.1.el7.x86_64                                33/37 
+    master1:   Verifying  : audit-2.8.1-3.el7.x86_64                                   34/37 
+    master1:   Verifying  : selinux-policy-3.13.1-192.el7_5.3.noarch                   35/37 
+    master1:   Verifying  : libselinux-2.5-12.el7.x86_64                               36/37 
+    master1:   Verifying  : libselinux-utils-2.5-12.el7.x86_64                         37/37
+    master1:  
+    master1: 
+    master1: Installed:
+    master1:   containerd.io.x86_64 0:1.6.6-3.1.el7                                          
+    master1:   docker-ce.x86_64 3:20.10.17-3.el7                                             
+    master1:   docker-ce-cli.x86_64 1:20.10.17-3.el7                                         
+    master1:   docker-compose-plugin.x86_64 0:2.6.0-3.el7                                    
+    master1: 
+    master1: Dependency Installed:
+    master1:   audit-libs-python.x86_64 0:2.8.5-4.el7                                        
+    master1:   checkpolicy.x86_64 0:2.5-8.el7                                                
+    master1:   container-selinux.noarch 2:2.119.2-1.911c772.el7_8                            
+    master1:   docker-ce-rootless-extras.x86_64 0:20.10.17-3.el7                             
+    master1:   docker-scan-plugin.x86_64 0:0.17.0-3.el7                                      
+    master1:   fuse-overlayfs.x86_64 0:0.7.2-6.el7_8                                         
+    master1:   fuse3-libs.x86_64 0:3.6.1-4.el7                                               
+    master1:   libcgroup.x86_64 0:0.41-21.el7                                                
+    master1:   libsemanage-python.x86_64 0:2.5-14.el7                                        
+    master1:   policycoreutils-python.x86_64 0:2.5-34.el7                                    
+    master1:   python-IPy.noarch 0:0.75-6.el7                                                
+    master1:   setools-libs.x86_64 0:3.3.8-4.el7                                             
+    master1:   slirp4netns.x86_64 0:0.4.3-4.el7_8                                            
+    master1: 
+    master1: Dependency Updated:
+    master1:   audit.x86_64 0:2.8.5-4.el7                                                    
+    master1:   audit-libs.x86_64 0:2.8.5-4.el7                                               
+    master1:   libselinux.x86_64 0:2.5-15.el7                                                
+    master1:   libselinux-python.x86_64 0:2.5-15.el7                                         
+    master1:   libselinux-utils.x86_64 0:2.5-15.el7                                          
+    master1:   libsemanage.x86_64 0:2.5-14.el7                                               
+    master1:   libsepol.x86_64 0:2.5-10.el7                                                  
+    master1:   policycoreutils.x86_64 0:2.5-34.el7                                           
+    master1:   selinux-policy.noarch 0:3.13.1-268.el7_9.2                                    
+    master1:   selinux-policy-targeted.noarch 0:3.13.1-268.el7_9.2                           
+    master1: 
+    master1: Complete!
+    master1: Loaded plugins: fastestmirror
+    master1: Loading mirror speeds from cached hostfile
+    master1:  * base: mirror.1000mbps.com
+    master1:  * extras: ftp.tudelft.nl
+    master1:  * updates: nl.mirrors.clouvider.net
+    master1: Resolving Dependencies
+    master1: --> Running transaction check
+    master1: ---> Package epel-release.noarch 0:7-11 will be installed
+    master1: --> Finished Dependency Resolution
+    master1: 
+    master1: Dependencies Resolved
+    master1: 
+    master1: ================================================================================
+    master1:  Package                Arch             Version         Repository        Size
+    master1: ================================================================================
+    master1: Installing:
+    master1:  epel-release           noarch           7-11            extras            15 k
+    master1: 
+    master1: Transaction Summary
+    master1: ================================================================================
+    master1: Install  1 Package
+    master1: 
+    master1: Total download size: 15 k
+    master1: Installed size: 24 k
+    master1: Downloading packages:
+    master1: Running transaction check
+    master1: Running transaction test
+    master1: Transaction test succeeded
+    master1: Running transaction
+    master1:   Installing : epel-release-7-11.noarch                                     1/1
+    master1:  
+    master1:   Verifying  : epel-release-7-11.noarch                                     1/1
+    master1:  
+    master1: 
+    master1: Installed:
+    master1:   epel-release.noarch 0:7-11                                                    
+    master1: 
+    master1: Complete!
+    master1: Loaded plugins: fastestmirror
+    master1: Loading mirror speeds from cached hostfile
+    master1:  * base: mirror.1000mbps.com
+    master1:  * epel: mirrors.coreix.net
+    master1:  * extras: ftp.tudelft.nl
+    master1:  * updates: nl.mirrors.clouvider.net
+    master1: Resolving Dependencies
+    master1: --> Running transaction check
+    master1: ---> Package jq.x86_64 0:1.6-2.el7 will be installed
+    master1: --> Processing Dependency: libonig.so.5()(64bit) for package: jq-1.6-2.el7.x86_64
+    master1: --> Running transaction check
+    master1: ---> Package oniguruma.x86_64 0:6.8.2-2.el7 will be installed
+    master1: --> Finished Dependency Resolution
+    master1: 
+    master1: Dependencies Resolved
+    master1: 
+    master1: ================================================================================
+    master1:  Package            Arch            Version                 Repository     Size
+    master1: ================================================================================
+    master1: Installing:
+    master1:  jq                 x86_64          1.6-2.el7               epel          167 k
+    master1: Installing for dependencies:
+    master1:  oniguruma          x86_64          6.8.2-2.el7             epel          181 k
+    master1: 
+    master1: Transaction Summary
+    master1: ================================================================================
+    master1: Install  1 Package (+1 Dependent package)
+    master1: 
+    master1: Total download size: 348 k
+    master1: Installed size: 1.0 M
+    master1: Downloading packages:
+    master1: warning: /var/cache/yum/x86_64/7/epel/packages/jq-1.6-2.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+    master1: Public key for jq-1.6-2.el7.x86_64.rpm is not installed
+    master1: --------------------------------------------------------------------------------
+    master1: Total                                               49 kB/s | 348 kB  00:07     
+    master1: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    master1: Importing GPG key 0x352C64E5:
+    master1:  Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+    master1:  Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+    master1:  Package    : epel-release-7-11.noarch (@extras)
+    master1:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    master1: Running transaction check
+    master1: Running transaction test
+    master1: Transaction test succeeded
+    master1: Running transaction
+    master1:   Installing : oniguruma-6.8.2-2.el7.x86_64                                 1/2
+    master1:  
+    master1:   Installing : jq-1.6-2.el7.x86_64                                          2/2
+    master1:  
+    master1:   Verifying  : oniguruma-6.8.2-2.el7.x86_64                                 1/2
+    master1:  
+    master1:   Verifying  : jq-1.6-2.el7.x86_64                                          2/2
+    master1:  
+    master1: 
+    master1: Installed:
+    master1:   jq.x86_64 0:1.6-2.el7                                                         
+    master1: 
+    master1: Dependency Installed:
+    master1:   oniguruma.x86_64 0:6.8.2-2.el7                                                
+    master1: 
+    master1: Complete!
+~/projects/vagrant-c7-terraform-docker $ vagrant ssh
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+[c7-master:vagrant:~] # 
+[c7-master:vagrant:~] # sudo -i
+[c7-master:root:~] #  cd learn-terraform-docker-container/
+[c7-master:root:~/learn-terraform-docker-container] # time terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding kreuzwerker/docker versions matching "~> 2.13.0"...
+- Installing kreuzwerker/docker v2.13.0...
+- Installed kreuzwerker/docker v2.13.0 (self-signed, key ID 24E54F214569A8A5)
+
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://www.terraform.io/docs/cli/plugins/signing.html
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+real	0m44.479s
+user	0m0.762s
+sys	0m0.463s
+[c7-master:root:~/learn-terraform-docker-container] # time terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_container.nginx will be created
+  + resource "docker_container" "nginx" {
+      + attach           = false
+      + bridge           = (known after apply)
+      + command          = (known after apply)
+      + container_logs   = (known after apply)
+      + entrypoint       = (known after apply)
+      + env              = (known after apply)
+      + exit_code        = (known after apply)
+      + gateway          = (known after apply)
+      + hostname         = (known after apply)
+      + id               = (known after apply)
+      + image            = (known after apply)
+      + init             = (known after apply)
+      + ip_address       = (known after apply)
+      + ip_prefix_length = (known after apply)
+      + ipc_mode         = (known after apply)
+      + log_driver       = "json-file"
+      + logs             = false
+      + must_run         = true
+      + name             = "ExampleNginxContainer"
+      + network_data     = (known after apply)
+      + read_only        = false
+      + remove_volumes   = true
+      + restart          = "no"
+      + rm               = false
+      + security_opts    = (known after apply)
+      + shm_size         = (known after apply)
+      + start            = true
+      + stdin_open       = false
+      + tty              = false
+
+      + healthcheck {
+          + interval     = (known after apply)
+          + retries      = (known after apply)
+          + start_period = (known after apply)
+          + test         = (known after apply)
+          + timeout      = (known after apply)
+        }
+
+      + labels {
+          + label = (known after apply)
+          + value = (known after apply)
+        }
+
+      + ports {
+          + external = 8000
+          + internal = 80
+          + ip       = "0.0.0.0"
+          + protocol = "tcp"
+        }
+    }
+
+  # docker_image.nginx will be created
+  + resource "docker_image" "nginx" {
+      + id           = (known after apply)
+      + keep_locally = false
+      + latest       = (known after apply)
+      + name         = "nginx:latest"
+      + output       = (known after apply)
+      + repo_digest  = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + container_id = (known after apply)
+  + image_id     = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+
+real	0m1.415s
+user	0m0.844s
+sys	0m0.161s
+[c7-master:root:~/learn-terraform-docker-container] # time terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_container.nginx will be created
+  + resource "docker_container" "nginx" {
+      + attach           = false
+      + bridge           = (known after apply)
+      + command          = (known after apply)
+      + container_logs   = (known after apply)
+      + entrypoint       = (known after apply)
+      + env              = (known after apply)
+      + exit_code        = (known after apply)
+      + gateway          = (known after apply)
+      + hostname         = (known after apply)
+      + id               = (known after apply)
+      + image            = (known after apply)
+      + init             = (known after apply)
+      + ip_address       = (known after apply)
+      + ip_prefix_length = (known after apply)
+      + ipc_mode         = (known after apply)
+      + log_driver       = "json-file"
+      + logs             = false
+      + must_run         = true
+      + name             = "ExampleNginxContainer"
+      + network_data     = (known after apply)
+      + read_only        = false
+      + remove_volumes   = true
+      + restart          = "no"
+      + rm               = false
+      + security_opts    = (known after apply)
+      + shm_size         = (known after apply)
+      + start            = true
+      + stdin_open       = false
+      + tty              = false
+
+      + healthcheck {
+          + interval     = (known after apply)
+          + retries      = (known after apply)
+          + start_period = (known after apply)
+          + test         = (known after apply)
+          + timeout      = (known after apply)
+        }
+
+      + labels {
+          + label = (known after apply)
+          + value = (known after apply)
+        }
+
+      + ports {
+          + external = 8000
+          + internal = 80
+          + ip       = "0.0.0.0"
+          + protocol = "tcp"
+        }
+    }
+
+  # docker_image.nginx will be created
+  + resource "docker_image" "nginx" {
+      + id           = (known after apply)
+      + keep_locally = false
+      + latest       = (known after apply)
+      + name         = "nginx:latest"
+      + output       = (known after apply)
+      + repo_digest  = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + container_id = (known after apply)
+  + image_id     = (known after apply)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+docker_image.nginx: Creating...
+docker_image.nginx: Still creating... [10s elapsed]
+docker_image.nginx: Still creating... [20s elapsed]
+docker_image.nginx: Still creating... [30s elapsed]
+docker_image.nginx: Still creating... [40s elapsed]
+docker_image.nginx: Still creating... [50s elapsed]
+docker_image.nginx: Creation complete after 51s [id=sha256:55f4b40fe486a5b734b46bb7bf28f52fa31426bf23be068c8e7b19e58d9b8debnginx:latest]
+docker_container.nginx: Creating...
+docker_container.nginx: Creation complete after 3s [id=906d8e382b06ff0f93d180a361631aedfcca50d666255c94ed3dcae993423ec4]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+container_id = "906d8e382b06ff0f93d180a361631aedfcca50d666255c94ed3dcae993423ec4"
+image_id = "sha256:55f4b40fe486a5b734b46bb7bf28f52fa31426bf23be068c8e7b19e58d9b8debnginx:latest"
+
+real	0m57.296s
+user	0m1.206s
+sys	0m0.346s
+[c7-master:root:~/learn-terraform-docker-container] # docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
+906d8e382b06   55f4b40fe486   "/docker-entrypoint.…"   57 seconds ago   Up 53 seconds   0.0.0.0:8000->80/tcp   ExampleNginxContainer
+[c7-master:root:~/learn-terraform-docker-container] # history
+    1   cd learn-terraform-docker-container/
+    2  time terraform init
+    3  time terraform plan
+    4  time terraform apply
+    5  docker ps
+    6  history
+[c7-master:root:~/learn-terraform-docker-container] # logout
+[c7-master:vagrant:~] # logout
+Connection to 127.0.0.1 closed.
+~/projects/vagrant-c7-terraform-docker $ 
+~/projects/vagrant-c7-terraform-docker $ 
+
