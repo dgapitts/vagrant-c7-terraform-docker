@@ -2,9 +2,9 @@
 
 Continuing the [hashicorp basic training ("Define Input Variables")](https://learn.hashicorp.com/tutorials/terraform/docker-change?in=terraform/docker-get-started)
 
-## Using variables defined in external file (variables.tf)
+## Using variables defined in external file variables.tf
 
-To start we 
+To start this exercise 
 * in `main.tf` replace the hardcoded `name` from the string "tutorial" to the new variable `var.container_name`
 * start a new `variables.tf` which defines `variable "container_name"`
 
